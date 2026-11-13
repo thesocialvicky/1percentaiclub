@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1% AI CLUB · 5-Day Live AI Content Automation Masterclass</title>
+<meta name="description" content="Five live, hands-on sessions to build your AI content workflow: ideas, scripts, face and voice clone, editing. 17–21 Nov 2026, 8:30 PM IST.">
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#060504">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Brand untouched: black + rose-gold, Plus Jakarta Sans, single accent colour. */
+:root{--bg:#060504;--card:#100b09;--line:#2a1c17;--ink:#f6efec;--mut:#a89a94;--rg:#e8a892;--grad:linear-gradient(135deg,#f3c9b8,#c97f68);--dk:#1a0f0c;color-scheme:dark;
+--f:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--ease:cubic-bezier(.2,.7,.2,1);--r:14px;--gap:14px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);overflow-x:hidden;height:100%}
+@supports (interpolate-size:allow-keywords){:root{interpolate-size:allow-keywords}}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--f);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video,iframe{max-width:100%}
+.w{max-width:1060px;margin:0 auto;padding:0 20px}
+
+/* ---------- Type & section rhythm ---------- */
+h1,h2,h3{font-family:var(--f);margin:0 0 14px;line-height:1.12;letter-spacing:-.025em;font-weight:700;text-wrap:balance}
+h1{font-size:clamp(2.1rem,4.7vw,3.35rem);font-weight:800;line-height:1.06}
+h2{font-size:clamp(1.7rem,4.2vw,2.6rem)}
+h3{font-size:1.08rem;margin-bottom:6px}
+em{font-style:normal;color:var(--rg)}
+p{margin:0}
+.lead{color:var(--mut);max-width:56ch;margin:0 auto}
+section{padding:clamp(60px,8.5vw,100px) 0;text-align:center;content-visibility:auto;contain-intrinsic-size:auto 640px}
+section+section{border-top:1px solid rgba(232,168,146,.08)}
+.sh{max-width:680px;margin:0 auto clamp(30px,4.5vw,46px)}
+.sh h2:last-child{margin-bottom:0}
+.sub{font-size:.85rem;color:var(--mut);margin-top:12px}.sub s{color:var(--rg)}
+.todo{border:1px dashed rgba(232,168,146,.5);border-radius:5px;padding:0 6px;color:var(--rg);font-size:.74em;background:rgba(232,168,146,.07);font-weight:500}
+.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:15px 36px;border:0;border-radius:10px;background:var(--grad);color:var(--dk);font:700 1.05rem var(--f);cursor:pointer;position:relative;overflow:hidden;box-shadow:0 8px 28px rgba(201,127,104,.26);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(201,127,104,.38)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn .arr{display:inline-block;transition:transform .3s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);pointer-events:none}
+.btn:hover::after{animation:sh .9s var(--ease)}
+@keyframes sh{to{left:140%}}
+.btn[aria-busy=true]{pointer-events:none;opacity:.85}
+.btn:focus-visible,summary:focus-visible,.ar:focus-visible{outline:3px solid var(--rg);outline-offset:3px}
+
+/* ---------- Trust badges: one component, used everywhere ---------- */
+.tb{display:flex;flex-wrap:wrap;gap:10px 22px;list-style:none;padding:0;margin:18px 0 0}
+.tb li{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--mut)}
+.tb .i{width:16px;height:16px;color:var(--rg)}
+.tb.c{justify-content:center}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--line)}
+.facts>div{padding:18px 12px;text-align:center;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.facts .i{color:var(--rg);margin-bottom:4px}
+.facts small{font-size:.76rem;color:var(--rg);font-weight:600}
+.facts b{font-size:.96rem;line-height:1.3;font-weight:700}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:clamp(36px,5.5vw,68px) 0 clamp(44px,6vw,72px);text-align:left;overflow:clip}
+.hero::before{content:"";position:absolute;width:min(80vw,900px);aspect-ratio:1;right:-12%;top:-35%;background:radial-gradient(closest-side,rgba(201,127,104,.22),transparent);animation:drift 18s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{to{transform:translate(-6%,8%) scale(1.1)}}
+.hero .w{position:relative;z-index:1}
+.hg{display:grid;column-gap:clamp(28px,5vw,56px);grid-template-columns:1fr 1.05fr;grid-template-areas:"copy media" "cta media";align-items:center}
+.copy{grid-area:copy;align-self:end}
+.hero .cta{grid-area:cta;align-self:start;margin-top:28px}
+.vwrap{grid-area:media}
+.live{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(232,168,146,.4);border-radius:999px;padding:7px 14px;font-size:.8rem;font-weight:600;color:var(--rg);margin-bottom:20px}
+.live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rg);animation:pl 1.6s infinite}@keyframes pl{50%{opacity:.25}}
+.hero .lead{margin:0;font-size:1.08rem;max-width:46ch}
+.hero .sub{margin-top:12px}
+.vsl{aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:1px solid rgba(232,168,146,.3);background:#000;position:relative;display:grid;place-items:center;box-shadow:0 0 0 1px rgba(232,168,146,.15),0 28px 90px rgba(201,127,104,.26)}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hero .facts{margin-top:clamp(36px,5vw,56px)}
+/* one orchestrated load sequence */
+.a{opacity:0;transform:translateY(16px);animation:up .85s var(--ease) forwards;animation-delay:calc(var(--n,0)*90ms + 60ms)}
+.vwrap.a{transform:translateY(24px) scale(.97)}
+@keyframes up{to{opacity:1;transform:none}}
+
+/* ---------- Placeholders & marquee ---------- */
+.ph{display:grid;place-items:center;align-content:center;gap:8px;text-align:center;padding:16px;color:var(--mut);font-size:.85rem;background:repeating-linear-gradient(135deg,transparent 0 12px,rgba(232,168,146,.045) 12px 24px)}
+.tile .ph::before,.vsl .ph::before{content:"▶";display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:rgba(232,168,146,.18);color:var(--rg);font-size:.9rem}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq+.mq{margin-top:var(--gap)}
+.mq .t{display:flex;gap:var(--gap);padding-right:var(--gap);width:max-content;animation:mq 48s linear infinite}
+.mq.r .t{animation-direction:reverse;animation-duration:56s}
+.mq:hover .t{animation-play-state:paused}
+.dup{display:contents}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tile{flex:none;width:clamp(130px,19vw,184px);aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.mq.r .tile{aspect-ratio:4/5;width:clamp(160px,22vw,224px)}
+.tile video{width:100%;height:100%;object-fit:cover}
+.tile .ph{height:100%;background:linear-gradient(160deg,hsl(var(--h) 38% 20%),#0a0605)}
+
+/* ---------- Problem / before-after ---------- */
+.pull{margin-top:20px;color:var(--ink);font-weight:600;font-size:1.1rem;text-wrap:balance}
+.ba{display:grid;gap:var(--gap);grid-template-columns:1fr 1fr;max-width:820px;margin:0 auto;text-align:left}
+.bx{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--card)}
+.bx.af{border-color:rgba(232,168,146,.35);background:linear-gradient(180deg,#1a100c,var(--card))}
+.bx h3{font-size:.95rem;color:var(--mut);margin:0 0 8px}.af h3{color:var(--rg)}
+.bx ul{list-style:none;padding:0;margin:0;font-size:.95rem}
+.bx li{padding:8px 0 8px 30px;position:relative;color:var(--mut)}
+.bx li+li{border-top:1px solid rgba(232,168,146,.07)}
+.bx li::before{content:"×";position:absolute;left:2px;top:5px;color:#ef4f4f;font-weight:800;font-size:1.2rem}
+.af li{color:var(--ink)}.af li::before{content:"✓";color:#3ecf8e;font-size:1.05rem;top:7px}
+
+/* ---------- Engine timeline (horizontal desktop, vertical mobile) ---------- */
+.tl{--p:0;list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap);position:relative;max-width:980px}
+.tl::before,.tl::after{content:"";position:absolute;top:7px;left:10%;right:10%;height:2px;border-radius:2px}
+.tl::before{background:var(--line)}
+.tl::after{background:var(--grad);transform-origin:left;transform:scaleX(var(--p));transition:transform .6s linear;box-shadow:0 0 12px rgba(232,168,146,.5)}
+.ti{position:relative;text-align:center;padding:0 6px;opacity:.35;transition:opacity .6s var(--ease)}
+.ti.on{opacity:1}
+.ti .dot{display:block;position:relative;z-index:1;width:16px;height:16px;border-radius:50%;border:2px solid var(--rg);background:var(--bg);margin:0 auto 18px;transition:background .4s,box-shadow .4s}
+.ti.on .dot{background:var(--rg);box-shadow:0 0 14px rgba(232,168,146,.7)}
+.ti b{display:block;font-size:.8rem;font-weight:700;color:var(--rg);margin-bottom:4px}
+.ti strong{display:block;font-size:1.05rem;font-weight:700;line-height:1.25}
+.ti p{margin-top:6px;color:var(--mut);font-size:.88rem}
+
+/* ---------- Curriculum ---------- */
+.days{list-style:none;margin:0 auto;padding:0;max-width:780px;text-align:left;border-top:1px solid var(--line)}
+.days li{display:grid;grid-template-columns:92px 1fr;gap:20px;align-items:baseline;padding:24px 4px;border-bottom:1px solid var(--line)}
+.days .d{font-weight:700;color:var(--rg);font-size:.95rem}
+.days h3{font-size:1.2rem;margin:0 0 4px;transition:color .3s}
+.days p{color:var(--mut);font-size:.95rem}
+.days li:hover h3{color:var(--rg)}
+
+/* ---------- Build grid & audience ---------- */
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap)}
+.cd{border:1px solid var(--line);border-radius:var(--r);padding:26px 16px;background:linear-gradient(180deg,#171009,#0d0907);position:relative;overflow:hidden;transition:border-color .3s}
+.cd::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--grad);opacity:.7}
+.cd:hover{border-color:rgba(232,168,146,.5)}
+.cd h3{margin:0;font-size:.98rem;line-height:1.3}
+.ic{width:46px;height:46px;border-radius:12px;background:rgba(232,168,146,.12);border:1px solid rgba(232,168,146,.25);display:grid;place-items:center;color:var(--rg);margin:0 auto 14px}
+.pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:820px;margin:0 auto}
+.pl{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:12px 20px;font-weight:600;font-size:.95rem;transition:border-color .3s}
+.pl:hover{border-color:rgba(232,168,146,.5)}
+.pl .i{color:var(--rg);width:18px;height:18px}
+
+/* ---------- Instructor ---------- */
+.ins{display:grid;grid-template-columns:.85fr 1.15fr;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);text-align:left;max-width:900px;margin:0 auto}
+.ins .ph{min-height:340px;border-right:1px solid var(--line)}
+.ins>div:last-child{padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;justify-content:center}
+.ins h3{font-size:1.8rem;margin-bottom:10px}
+.ins .lead{margin:0;max-width:none}
+.sts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.sts b{display:block;font-weight:700;margin-bottom:4px}
+
+/* ---------- Proof carousel ---------- */
+.tr{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,calc((100% - 28px)/3));gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-bottom:18px}
+.tr::-webkit-scrollbar{display:none}
+.tr .bx{scroll-snap-align:start;min-height:150px;display:grid;place-items:center;text-align:center}
+.arrows{display:flex;gap:12px;justify-content:center;margin-bottom:34px}
+.ar{background:none;border:1px solid var(--line);color:var(--ink);width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.1rem;transition:border-color .3s,opacity .3s}
+.ar:hover:not(:disabled){border-color:var(--rg)}.ar:disabled{opacity:.3;cursor:default}
+
+/* ---------- Pricing ---------- */
+.price{border:1px solid rgba(232,168,146,.4);border-radius:22px;padding:clamp(28px,5vw,40px) clamp(20px,4vw,32px);max-width:480px;margin:0 auto;background:radial-gradient(80% 60% at 50% 0,rgba(201,127,104,.22),transparent),var(--card);box-shadow:0 0 90px rgba(201,127,104,.18)}
+.price .mrp{color:var(--mut);font-size:.9rem}.price .mrp s{color:var(--rg)}
+.price .n{font:800 clamp(3.4rem,12vw,5rem)/1.05 var(--f);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin:6px 0 10px}
+.save{display:inline-block;background:var(--grad);color:var(--dk);font-weight:700;font-size:.85rem;border-radius:6px;padding:4px 14px}
+.price .per{margin-top:12px;color:var(--mut);font-size:.88rem}
+.price ul.inc{list-style:none;padding:20px 0 0;margin:22px 0 26px;border-top:1px solid var(--line);text-align:left;display:grid;gap:12px}
+.price .inc li{display:flex;gap:12px;align-items:center;font-size:.95rem}
+.price .inc .i{width:18px;height:18px;color:var(--rg)}
+.price .btn{width:100%}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:720px;margin:0 auto;text-align:left;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:20px 4px;font-weight:600;min-height:56px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .3s}
+summary:hover{color:var(--rg)}
+summary::after{content:"+";color:var(--rg);font-size:1.5rem;line-height:1;transition:transform .35s var(--ease);flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+summary::-webkit-details-marker{display:none}
+details::details-content{block-size:0;overflow:clip;transition:block-size .35s var(--ease),content-visibility .35s allow-discrete}
+details[open]::details-content{block-size:auto}
+details p{padding:0 4px 22px;color:var(--mut);max-width:60ch}
+
+/* ---------- Final CTA, footer, sticky ---------- */
+.fin{background:radial-gradient(60% 70% at 50% 100%,rgba(201,127,104,.26),transparent 70%)}
+.fin h2{font-size:clamp(2rem,6vw,3.3rem)}
+.fin .lead{margin-bottom:28px}
+footer{padding:34px 0 110px;text-align:center;color:var(--mut);font-size:.82rem}
+.stk{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(6,5,4,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);visibility:hidden;transition:transform .45s var(--ease),visibility 0s .45s}
+.stk.show{transform:none;visibility:visible;transition:transform .45s var(--ease),visibility 0s}
+.stk-in{max-width:1060px;margin:0 auto;padding:0 4px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.stk-p{display:flex;align-items:baseline;gap:4px 10px;flex-wrap:wrap;text-align:left;line-height:1.3}
+.stk-p b{font-size:1.3rem;font-weight:800}.stk-p s{color:var(--rg);font-size:.85rem}.stk-p span{color:var(--mut);font-size:.85rem}
+.stk .btn{width:auto;min-height:48px;padding:10px 28px;font-size:1rem;flex:none}
+.note{position:fixed;left:50%;bottom:96px;z-index:30;transform:translate(-50%,12px);max-width:min(92vw,440px);background:var(--card);border:1px solid rgba(232,168,146,.4);border-radius:12px;padding:12px 18px;font-size:.88rem;color:var(--ink);text-align:center;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s var(--ease)}
+.note.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- Scroll reveals (only when JS is on) ---------- */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .stg>*{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease),border-color .3s;transition-delay:calc(var(--i,0)*70ms),calc(var(--i,0)*70ms),0s}
+.js .stg.in>*{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){.g5{grid-template-columns:1fr}.cd{display:flex;align-items:center;gap:16px;text-align:left;padding:18px}.cd .ic{margin:0;flex:none}}
+@media(max-width:820px){
+ .hg{grid-template-columns:1fr;grid-template-areas:"copy" "media" "cta";text-align:center;row-gap:28px}
+ .hero .lead{margin-inline:auto}.hero .cta{margin-top:0}.hero .tb{justify-content:center}
+ .ins{grid-template-columns:1fr}.ins .ph{min-height:260px;border-right:0;border-bottom:1px solid var(--line)}
+}
+@media(max-width:760px){
+ .tl{grid-template-columns:1fr;gap:0;max-width:420px;text-align:left}
+ .tl::before,.tl::after{top:8px;bottom:8px;left:7px;right:auto;width:2px;height:auto}
+ .tl::after{transform-origin:top;transform:scaleY(var(--p))}
+ .ti{text-align:left;padding:0 0 28px 38px}.ti:last-child{padding-bottom:0}
+ .ti .dot{position:absolute;left:0;top:2px;margin:0}
+}
+@media(max-width:700px){.facts{grid-template-columns:1fr 1fr}.ba{grid-template-columns:1fr}.tr{grid-auto-columns:84%}.sts{grid-template-columns:1fr}.days li{grid-template-columns:1fr;gap:4px}}
+@media(max-width:640px){.btn{width:100%}.stk .btn{width:auto;padding:10px 22px}.stk-p span{display:none}.tile{width:clamp(120px,34vw,150px)}.mq.r .tile{width:clamp(140px,40vw,180px)}.mq .t{animation-duration:60s}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .a,.js .rv,.js .stg>*{opacity:1!important;transform:none!important}.ti{opacity:1}.tl{--p:1!important}.mq{overflow-x:auto}}
+#thanks{display:none;min-height:80vh;place-items:center;text-align:center;padding:30px 20px}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+<symbol id="live" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></symbol>
+<symbol id="hand" viewBox="0 0 24 24"><path d="M9 12V5a1.5 1.5 0 013 0v6M12 11V4a1.5 1.5 0 013 0v7M15 11V6a1.5 1.5 0 013 0v8c0 4-2 7-6 7s-5-2-6-5l-1-3a1.5 1.5 0 013-1l1 2"/></symbol>
+<symbol id="rupee" viewBox="0 0 24 24"><path d="M7 5h10M7 9h10M7 5c5 0 7 2 7 4s-2 4-7 4l7 6"/></symbol>
+<symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5M12 17h.01"/></symbol>
+<symbol id="bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0012 3z"/></symbol>
+<symbol id="chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></symbol>
+<symbol id="film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M17 9h4M3 15h4M17 15h4"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+<symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol>
+<symbol id="brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 13h18"/></symbol>
+<symbol id="mega" viewBox="0 0 24 24"><path d="M3 11v3l12 5V6L3 11zM15 9a3 3 0 010 6M6 15l1 5"/></symbol>
+<symbol id="spark" viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></symbol>
+<symbol id="cal" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+</svg>
+
+<main id="lp">
+
+<!-- HERO -->
+<header class="hero"><div class="w">
+ <div class="hg">
+  <div class="copy">
+   <span class="live a" style="--n:0">Live · 17–21 Nov · 8:30 PM IST</span>
+   <h1 class="a" style="--n:1">Your Face. Your Voice. <em>5 Minutes a Post.</em></h1>
+   <p class="lead a" style="--n:2">Build an AI content workflow that turns ideas into ready-to-post videos that look and sound like you. Five live, hands-on sessions.</p>
+  </div>
+  <div class="cta a" style="--n:3">
+   <button class="btn" data-cta="hero">Register now · ₹499.99<span class="arr">→</span></button>
+   <p class="sub"><s>₹1,699.99</s> · You save ₹1,200</p>
+   <ul class="tb">
+    <li><svg class="i"><use href="#lock"/></svg>Secure checkout</li>
+    <li><svg class="i"><use href="#rupee"/></svg>One-time payment</li>
+    <li><svg class="i"><use href="#hand"/></svg>Live, not recorded</li>
+   </ul>
+  </div>
+  <div class="vwrap a" style="--n:2"><div class="vsl" id="vsl"></div></div>
+ </div>
+ <div class="facts a" style="--n:5">
+  <div><svg class="i"><use href="#cal"/></svg><small>Dates</small><b>17–21 Nov 2026</b></div>
+  <div><svg class="i"><use href="#clock"/></svg><small>Time</small><b>8:30–10:00 PM IST</b></div>
+  <div><svg class="i"><use href="#live"/></svg><small>Format</small><b>Live online, hands-on</b></div>
+  <div><svg class="i"><use href="#check"/></svg><small>Length</small><b>5 days · not recorded</b></div>
+ </div>
+</div></header>
+
+<!-- SHOWCASE -->
+<section>
+ <div class="w"><div class="sh rv"><h2>See what you can <em>create.</em></h2>
+  <p class="lead">Real AI-generated examples of the content you’ll learn to produce with this workflow.</p></div></div>
+ <div class="mq rv" aria-label="Examples of AI-generated videos"><div class="t" id="m1"></div></div>
+ <div class="mq r rv" aria-hidden="true"><div class="t" id="m2"></div></div>
+</section>
+
+<!-- PROBLEM -->
+<section><div class="w">
+ <div class="sh rv"><h2>Content shouldn’t eat <em>your week.</em></h2>
+  <p class="lead">Running out of ideas. Hours on scripts. Retakes. Slow edits and patchy posting.</p>
+  <p class="pull">It’s not a talent problem. It’s a process problem, and a process can be rebuilt.</p></div>
+ <div class="ba stg">
+  <div class="bx"><h3>Before</h3><ul><li>No idea what to post today</li><li>Hours lost on scripts</li><li>Retakes and repeated recording</li><li>Edits pile up, posting is patchy</li></ul></div>
+  <div class="bx af"><h3>After</h3><ul><li>A repeatable way to find ideas</li><li>Your own script-generation agent</li><li>An AI face and voice clone workflow</li><li>A finished post made in the workshop</li></ul></div>
+ </div>
+</div></section>
+
+<!-- ENGINE -->
+<section><div class="w">
+ <div class="sh rv"><h2>One workflow. <em>Five steps.</em></h2>
+  <p class="lead">The AI Content Engine, from blank page to ready-to-post.</p></div>
+ <ol class="tl" id="tl">
+  <li class="ti"><span class="dot"></span><b>Step 1</b><strong>Content Ideas</strong><p>Never start from a blank page.</p></li>
+  <li class="ti"><span class="dot"></span><b>Step 2</b><strong>Script Generation</strong><p>Scripts written by your own agent.</p></li>
+  <li class="ti"><span class="dot"></span><b>Step 3</b><strong>AI Face &amp; Voice Cloning</strong><p>Your face and voice on screen.</p></li>
+  <li class="ti"><span class="dot"></span><b>Step 4</b><strong>Video Editing</strong><p>Edited without the usual delays.</p></li>
+  <li class="ti"><span class="dot"></span><b>Step 5</b><strong>Ready-to-Post Content</strong><p>Review, then publish.</p></li>
+ </ol>
+</div></section>
+
+<!-- CURRICULUM -->
+<section><div class="w">
+ <div class="sh rv"><h2>Five days. <em>One system.</em></h2></div>
+ <ol class="days stg">
+  <li><span class="d">Day 1</span><div><h3>The Idea Machine</h3><p>Build your idea-scraping automation.</p></div></li>
+  <li><span class="d">Day 2</span><div><h3>Script Mega Prompt Agent Creation</h3><p>Create your personal script-generation agent.</p></div></li>
+  <li><span class="d">Day 3</span><div><h3>Clone Face and Voice</h3><p>Set up your AI face and voice clone workflow.</p></div></li>
+  <li><span class="d">Day 4</span><div><h3>AI-Based Free Editing</h3><p>Build your video editing workflow.</p></div></li>
+  <li><span class="d">Day 5</span><div><h3>Hands-On Challenge</h3><p>Make your finished, ready-to-post video.</p></div></li>
+ </ol>
+ <div class="rv" style="margin-top:40px"><button class="btn" data-cta="curriculum">Register now · ₹499.99<span class="arr">→</span></button></div>
+</div></section>
+
+<!-- WHAT YOU'LL BUILD -->
+<section><div class="w">
+ <div class="sh rv"><h2>You don’t just watch. <em>You build.</em></h2></div>
+ <div class="g5 stg">
+  <div class="cd"><div class="ic"><svg class="i"><use href="#bulb"/></svg></div><h3>Idea-scraping automation</h3></div>
+  <div class="cd"><div class="ic"><svg class="i"><use href="#chat"/></svg></div><h3>Personal script-generation agent</h3></div>
+  <div class="cd"><div class="ic"><svg class="i"><use href="#mic"/></svg></div><h3>AI face and voice clone workflow</h3></div>
+  <div class="cd"><div class="ic"><svg class="i"><use href="#film"/></svg></div><h3>Video editing workflow</h3></div>
+  <div class="cd"><div class="ic"><svg class="i"><use href="#check"/></svg></div><h3>A finished social media post</h3></div>
+ </div>
+</div></section>
+
+<!-- AUDIENCE -->
+<section><div class="w">
+ <div class="sh rv"><h2>Is this masterclass <em>for you?</em></h2></div>
+ <div class="pills stg">
+  <span class="pl"><svg class="i"><use href="#spark"/></svg>Entrepreneurs</span>
+  <span class="pl"><svg class="i"><use href="#brief"/></svg>Business owners</span>
+  <span class="pl"><svg class="i"><use href="#film"/></svg>Content creators</span>
+  <span class="pl"><svg class="i"><use href="#help"/></svg>Coaches &amp; consultants</span>
+  <span class="pl"><svg class="i"><use href="#user"/></svg>Freelancers</span>
+  <span class="pl"><svg class="i"><use href="#mega"/></svg>Digital marketers</span>
+  <span class="pl"><svg class="i"><use href="#shield"/></svg>Personal brands</span>
+ </div>
+</div></section>
+
+<!-- INSTRUCTOR -->
+<section><div class="w">
+ <div class="sh rv"><h2>Meet your <em>trainer.</em></h2></div>
+ <div class="ins rv"><div class="ph">Trainer photo<br>(from 1percentaiclub.in)</div>
+  <div><h3>[Trainer name] <span class="todo">add</span></h3>
+   <p class="lead">Verified bio and credentials <span class="todo">paste from existing site; never invent</span></p>
+   <div class="sts"><div><b>[Credential]</b><span class="todo">add</span></div><div><b>[Credential]</b><span class="todo">add</span></div><div><b>[Credential]</b><span class="todo">add</span></div></div>
+  </div></div>
+</div></section>
+
+<!-- TRUST & PROOF -->
+<section><div class="w">
+ <div class="sh rv"><h2>Real demos. <em>Honest tools.</em></h2></div>
+ <div class="tr" id="tr" role="region" aria-label="Testimonials" tabindex="0">
+  <div class="bx"><span class="todo">Add real testimonial or screenshot #1</span></div>
+  <div class="bx"><span class="todo">Add real testimonial or screenshot #2</span></div>
+  <div class="bx"><span class="todo">Add real testimonial or screenshot #3</span></div>
+ </div>
+ <div class="arrows"><button class="ar" id="pv" aria-label="Previous">←</button><button class="ar" id="nx" aria-label="Next">→</button></div>
+ <div class="facts rv">
+  <div><svg class="i"><use href="#live"/></svg><b>Live, not recorded</b></div>
+  <div><svg class="i"><use href="#hand"/></svg><b>Hands-on practice</b></div>
+  <div><svg class="i"><use href="#shield"/></svg><b>Transparent about tools</b></div>
+  <div><svg class="i"><use href="#help"/></svg><b>Support: <span class="todo">add contact</span></b></div>
+ </div>
+ <p class="sub">Some tools may need a paid plan. <span class="todo">list exact tools and costs</span></p>
+</div></section>
+
+<!-- PRICING -->
+<section id="offer"><div class="w">
+ <div class="sh rv"><h2>Everything for <em>one price.</em></h2></div>
+ <div class="price rv">
+  <p class="mrp">MRP <s>₹1,699.99</s></p>
+  <div class="n">₹499.99</div>
+  <span class="save">You save ₹1,200</span>
+  <p class="per">About ₹100 per live session</p>
+  <ul class="inc">
+   <li><svg class="i"><use href="#live"/></svg>5 live, hands-on sessions</li>
+   <li><svg class="i"><use href="#cal"/></svg>17–21 Nov · 8:30–10:00 PM IST</li>
+   <li><svg class="i"><use href="#spark"/></svg>The full AI Content Engine workflow</li>
+  </ul>
+  <button class="btn" data-cta="offer">Register now · ₹499.99<span class="arr">→</span></button>
+  <ul class="tb c"><li><svg class="i"><use href="#lock"/></svg>Secure checkout</li><li><svg class="i"><use href="#rupee"/></svg>One-time payment</li></ul>
+  <p class="sub">Payment methods: <span class="todo">add UPI / cards / netbanking</span></p>
+ </div>
+</div></section>
+
+<!-- FAQ -->
+<section><div class="w">
+ <div class="sh rv"><h2>Questions? <em>Answers.</em></h2></div>
+ <div class="faq rv">
+  <details><summary>Is this live or recorded?</summary><p>Live. It’s a practical five-day live masterclass, not a recorded online course.</p></details>
+  <details><summary>Do I need previous AI experience?</summary><p><span class="todo">Confirm answer</span></p></details>
+  <details><summary>Are paid tools required?</summary><p>Some tools may have free plans while others may need a paid subscription. <span class="todo">Confirm list</span></p></details>
+  <details><summary>Will I learn face and voice cloning?</summary><p>Yes. Day 3 is Clone Face and Voice.</p></details>
+  <details><summary>What equipment do I need?</summary><p><span class="todo">Confirm (device, internet, camera/mic)</span></p></details>
+  <details><summary>What happens if I miss a session?</summary><p><span class="todo">Confirm replay policy</span></p></details>
+  <details><summary>Is payment one-time?</summary><p>Registration is ₹499.99 as a single payment. <span class="todo">Confirm</span></p></details>
+  <details><summary>How do I access the sessions?</summary><p><span class="todo">Confirm platform and how joining link is sent</span></p></details>
+ </div>
+ <p class="sub" style="margin-top:22px">Still have a question? <span class="todo">add WhatsApp / email</span></p>
+</div></section>
+
+<!-- FINAL CTA -->
+<section class="fin" id="final"><div class="w rv">
+ <h2>Stop letting good ideas <em>sit in your notes.</em></h2>
+ <p class="lead">17–21 November 2026 · 8:30–10:00 PM IST · Live online</p>
+ <button class="btn" data-cta="final">Register now · ₹499.99<span class="arr">→</span></button>
+ <p class="sub"><s>₹1,699.99</s> · You save ₹1,200</p>
+ <ul class="tb c"><li><svg class="i"><use href="#lock"/></svg>Secure checkout</li><li><svg class="i"><use href="#rupee"/></svg>One-time payment</li><li><svg class="i"><use href="#hand"/></svg>Live, not recorded</li></ul>
+</div></section>
+</main>
+
+<div id="thanks" role="status"><div><h1>Checking your payment…</h1><p class="lead" id="thanksMsg">Please wait.</p></div></div>
+<footer><div class="w">© 2026 1% AI CLUB · <span class="todo">add Terms, Privacy, Refund, contact</span></div></footer>
+
+<div class="stk" id="stk"><div class="stk-in">
+ <div class="stk-p"><b>₹499.99</b><s>₹1,699.99</s><span>5-day live masterclass</span></div>
+ <button class="btn" data-cta="sticky">Register now<span class="arr">→</span></button>
+</div></div>
+<div class="note" id="note" role="status" aria-live="polite"></div>
+
+<script>
+/* ===== CONFIG: fill in. NEVER put secret keys here. ===== */
+const CONFIG={vslUrl:"",videos:[],pixelId:"YOUR_PIXEL_ID",capiEndpoint:"/api/capi",checkoutEndpoint:"/api/create-order",verifyEndpoint:"/api/verify-payment",price:499.99,currency:"INR",name:"5-Day Live AI Content Automation Masterclass"};
+const uid=()=>crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(16).slice(2);
+function loadPixel(){if(!CONFIG.pixelId||CONFIG.pixelId.startsWith("YOUR"))return;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',CONFIG.pixelId)}
+function track(name,extra,eventId){const id=eventId||uid(),data=Object.assign({value:CONFIG.price,currency:CONFIG.currency,content_name:CONFIG.name},extra||{});
+try{window.fbq&&fbq('track',name,data,{eventID:id})}catch(e){}
+try{fetch(CONFIG.capiEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},keepalive:true,body:JSON.stringify({event_name:name,event_id:id,event_source_url:location.href,data})}).catch(()=>{})}catch(e){}
+return id}
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* VSL + showcase tiles */
+$("#vsl").innerHTML=CONFIG.vslUrl?`<iframe src="${CONFIG.vslUrl}" title="1% AI CLUB masterclass video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`:`<div class="ph">VSL placeholder<br>Set CONFIG.vslUrl</div>`;
+const vids=CONFIG.videos.length?CONFIG.videos:Array.from({length:6},(_,i)=>({label:"AI video "+(i+1)}));
+const tile=(v,i)=>`<div class="tile" style="--h:${(i*23+8)%40}">${v.src?`<video src="${v.src}" poster="${v.poster||""}" muted loop playsinline preload="none" controls aria-label="${v.label||"AI video"}"></video>`:`<div class="ph">${v.label}<br>(add real AI video)</div>`}</div>`;
+/* second copy is inert so keyboard/screen readers skip the duplicate loop */
+const row=o=>{const h=vids.map((v,i)=>tile(v,i+o)).join("");return h+`<div class="dup" aria-hidden="true" inert>${h}</div>`};
+$("#m1").innerHTML=row(0);$("#m2").innerHTML=row(3);
+
+/* Engine timeline: dots light up in sequence while the line fills */
+const tl=$("#tl"),steps=$$("#tl .ti");
+function play(){if(RM){steps.forEach(e=>e.classList.add("on"));tl.style.setProperty("--p",1);return}
+steps.forEach((e,i)=>setTimeout(()=>{e.classList.add("on");tl.style.setProperty("--p",i/(steps.length-1))},300+i*600))}
+let played=false;new IntersectionObserver(es=>{if(es[0].isIntersecting&&!played){played=true;play()}},{threshold:.35}).observe(tl);
+
+/* Testimonial carousel */
+const tr=$("#tr"),pv=$("#pv"),nx=$("#nx");
+const stepW=()=>{const b=tr.querySelector(".bx");return(b?b.offsetWidth:300)+14};
+const upd=()=>{pv.disabled=tr.scrollLeft<4;nx.disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4};
+nx.onclick=()=>tr.scrollBy({left:stepW(),behavior:"smooth"});pv.onclick=()=>tr.scrollBy({left:-stepW(),behavior:"smooth"});
+tr.addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);upd();
+
+/* Notice (replaces blocking alert) */
+let nt;function say(m){const n=$("#note");n.textContent=m;n.classList.add("show");clearTimeout(nt);nt=setTimeout(()=>n.classList.remove("show"),5000)}
+
+/* Checkout */
+$$("[data-cta]").forEach(b=>b.dataset.label=b.innerHTML);
+async function checkout(src,btn){track("InitiateCheckout",{source:src});
+btn.setAttribute("aria-busy","true");btn.textContent="Opening secure checkout…";
+try{const r=await fetch(CONFIG.checkoutEndpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({product:CONFIG.name,amount:CONFIG.price,currency:CONFIG.currency,returnUrl:location.origin+location.pathname+"#thank-you"})});const d=await r.json();if(d.url){location.href=d.url;return}}catch(e){}
+btn.removeAttribute("aria-busy");btn.innerHTML=btn.dataset.label;
+say("Payment gateway not connected yet. Set CONFIG.checkoutEndpoint (server-side order creation).")}
+$$("[data-cta]").forEach(b=>b.addEventListener("click",()=>checkout(b.dataset.cta,b)));
+addEventListener("pageshow",e=>{if(e.persisted)$$("[data-cta][aria-busy]").forEach(b=>{b.removeAttribute("aria-busy");b.innerHTML=b.dataset.label})});
+
+/* Purchase fires only after server-verified payment */
+async function route(){const ty=location.hash==="#thank-you";$("#lp").style.display=ty?"none":"";$("#thanks").style.display=ty?"grid":"none";if(!ty)return;
+const msg=$("#thanksMsg");try{const r=await fetch(CONFIG.verifyEndpoint+location.search);const d=await r.json();
+if(d.verified){track("Purchase",{value:d.value,currency:d.currency},d.eventId);msg.textContent="Payment confirmed. You’re registered. Check your email for joining details."}else msg.textContent="We couldn’t verify your payment yet. If you were charged, please contact support."}catch(e){msg.textContent="Verification service not connected yet (CONFIG.verifyEndpoint)."}}
+addEventListener("hashchange",route);route();
+loadPixel();track("PageView");setTimeout(()=>track("ViewContent"),3000);
+
+/* Scroll reveals (staggered groups) */
+$$(".stg").forEach(g=>[...g.children].forEach((c,i)=>c.style.setProperty("--i",i)));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+$$(".rv,.stg").forEach(el=>io.observe(el));
+
+/* Sticky CTA: appears after the hero, hides while pricing / final CTA are on screen */
+const stk=$("#stk");let scrolled=false,covered=new Set();
+const sync=()=>stk.classList.toggle("show",scrolled&&covered.size===0);
+addEventListener("scroll",()=>{scrolled=scrollY>innerHeight*.7;sync()},{passive:true});
+const cov=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?covered.add(e.target.id):covered.delete(e.target.id));sync()},{threshold:.25});
+["#offer","#final"].forEach(s=>cov.observe($(s)));
+</script></body></html>
